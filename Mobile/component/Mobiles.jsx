@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Mobile from './Mobile';
+import './style.css'
 
 export default function Mobiles() {
   const [mobiles, setMobiles] = useState([]);
@@ -10,12 +11,14 @@ export default function Mobiles() {
   } , [])
 
   return (
-    <div>
-      <h2>{
+   
+      <div className='flex flex-wrap justify-center items-center'>
+      {
       
-        mobiles.map((mobile,index)=> <Mobile mobile={mobile} key={index}></Mobile>)
+        mobiles.map((mobile, index) => <Mobile mobile={mobile} key={index}></Mobile>)
       
-      }</h2>
-    </div>
+      }
+        </div>
+    
   )
 }

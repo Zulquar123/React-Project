@@ -5,7 +5,7 @@ import Mobiles from '../component/Mobiles'
 
 export default function App() {
   return (
-    <div>
+    <div className='bg-black w-full h-full '>
       <Mobiles />
   
       

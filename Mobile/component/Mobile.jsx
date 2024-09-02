@@ -1,18 +1,22 @@
 import React from 'react'
+import './style.css'
+
 
 export default function Mobile({ mobile }) {
 
     const { brand, model, price, imageLink } = mobile;
     
-  return (
-      <div>
-          <div>
-              <img src={imageLink} alt="" />
-          </div>
-          <h1>{ brand}</h1>
-          <h2>{model}</h2>
-          <h3>{ price}</h3>
+    return (
+      
+      <div className='mobile'>
+        
+               <img src={imageLink} alt="" className='img' />
           
-    </div>
+                        <h1 className='font'>Brand : {brand}</h1>
+                        <h2 className='font'>Model : {model}</h2>
+                        <h3 className='font'>Price : {price}</h3>
+                
+        </div>
+    
   )
 }
