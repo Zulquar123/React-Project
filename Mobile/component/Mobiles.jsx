@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Mobile from './Mobile';
 
 export default function Mobiles() {
   const [mobiles, setMobiles] = useState([]);
@@ -8,19 +9,13 @@ export default function Mobiles() {
       .then(data => setMobiles(data))
   } , [])
 
-
-
-
-
-
-
-
-
-
   return (
     <div>
-
-      <h1>No. Of Mobiles : {mobiles.length}</h1>
+      <h2>{
+      
+        mobiles.map((mobile,index)=> <Mobile mobile={mobile} key={index}></Mobile>)
+      
+      }</h2>
     </div>
   )
 }

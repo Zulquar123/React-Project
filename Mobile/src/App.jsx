@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 import Mobiles from '../component/Mobiles'
 
 
