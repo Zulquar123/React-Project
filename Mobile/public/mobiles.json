@@ -1,5 +1,5 @@
 [
-    {
+    {   "id": 0,
         "brand": "Apple",
         "model": "iPhone 14 Pro",
         "price": 999,
@@ -9,7 +9,7 @@
         "os": "iOS 17",
         "imageLink": "https://www.91-img.com/pictures/132396-v8-apple-iphone-xi-mobile-phone-large-1.jpg?tr=q-80"
     },
-    {
+    {   "id": 2,
         "brand": "Samsung",
         "model": "Galaxy S23",
         "price": 899,
@@ -19,7 +19,7 @@
         "os": "Android 13",
         "imageLink": "https://www.91-img.com/pictures/150600-v5-samsung-galaxy-a55-mobile-phone-large-1.jpg"
     },
-    {
+    {"id": 2,
         "brand": "Google",
         "model": "Pixel 8",
         "price": 799,
@@ -29,7 +29,7 @@
         "os": "Android 14",
         "imageLink": "https://www.91-img.com/pictures/149928-v2-google-pixel-8a-mobile-phone-large-1.jpg?tr=q-80"
     },
-    {
+    {"id": 3,
         "brand": "OnePlus",
         "model": "OnePlus 11",
         "price": 749,
@@ -39,7 +39,7 @@
         "os": "Android 13",
         "imageLink": "https://www.91-img.com/pictures/152867-v4-oneplus-nord-ce-4-5g-mobile-phone-large-1.jpg?tr=q-80"
     },
-    {
+    {"id": 4,
         "brand": "Nokia",
         "model": "X30 5G",
         "price": 729,
@@ -49,7 +49,7 @@
         "os": "Android 15",
         "imageLink": "https://www.91-img.com/pictures/152469-v3-nokia-x30-5g-mobile-phone-large-1.jpg?tr=q-80"
     },
-    {
+    {"id": 5,
         "brand": "Motorola",
         "model": "50 Pro 5G",
         "price": 790,
@@ -59,7 +59,7 @@
         "os": "Android 14",
         "imageLink": "https://www.91-img.com/pictures/150376-v3-motorola-edge-50-pro-5g-mobile-phone-large-1.jpg?tr=q-80"
     },
-    {
+    {"id": 6,
         "brand": "Vivo",
         "model": "S19 Pro",
         "price": 749,
@@ -69,7 +69,7 @@
         "os": "Android 15",
         "imageLink": "https://www.91-img.com/pictures/162428-v2-vivo-s19-pro-mobile-phone-large-1.jpg?tr=q-80"
     },
-       {
+       {"id": 7,
         "brand": "Oppo",
         "model": "Reno 12 Pro",
         "price": 800,
@@ -79,7 +79,7 @@
         "os": "Android 13",
         "imageLink": "https://www.91-img.com/pictures/161480-v8-oppo-reno12-pro-mobile-phone-large-1.jpg?tr=q-80"
     },
-    {
+    {   "id": 8,
         "brand": "Honor",
         "model": "200 Lite",
         "price": 755,
@@ -89,7 +89,7 @@
         "os": "Android 12",
         "imageLink": "https://www.91-img.com/pictures/161795-v1-honor-200-lite-mobile-phone-large-1.jpg?tr=q-80"
     },
-     {
+     {  "id": 9,
         "brand": "LG",
         "model": "S20 5G",
         "price": 855,

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Mobile from './Mobile';
 import './style.css'
+import { addCart , getCart} from './storage';
+
 
 export default function Mobiles() {
   const [mobiles, setMobiles] = useState([]);
@@ -10,13 +12,21 @@ export default function Mobiles() {
       .then(res => res.json())
       .then(data => setMobiles(data))
   }, [])
+
+  useEffect(() => {
+    const getkart = getCart();
+    console.log(getkart);
+  },[])
   
 
   const handleCart = mobile => {
     alert("Mobile Added to the Cart");
     const newCart = [...cart, mobile];
     setCart(newCart);
+    addCart(mobile.id);
     alert(`Total Items in the Cart : ${cart.length+1}`);
+    
+    
 }
 
   return (
