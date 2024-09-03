@@ -16,13 +16,13 @@ export default function Mobiles() {
     alert("Mobile Added to the Cart");
     const newCart = [...cart, mobile];
     setCart(newCart);
-
+    alert(`Total Items in the Cart : ${cart.length+1}`);
 }
 
   return (
 
     <div className='card'>
-      
+      <h6>Items in the Cart : { cart.length}</h6>
       {
       
         mobiles.map((mobile, index) => <Mobile
