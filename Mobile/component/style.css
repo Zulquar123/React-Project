@@ -7,11 +7,30 @@
 
 .font {
     font-weight: 900;
-    font-size: larger;
+    font-size: large;
     text-align: center;
     color: yellow;
 }
 
 .img {
     border-radius: 15px;
+}
+.btn {
+    margin: 10px;
+    color: white;
+    background-color: rgb(5, 62, 204);
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
