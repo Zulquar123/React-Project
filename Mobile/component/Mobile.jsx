@@ -2,7 +2,7 @@ import React from 'react'
 import './style.css'
 
 
-export default function Mobile({ mobile , handleCart}) {
+export default function Mobile({ mobile , handleCart , handleStock}) {
 
     const { brand, model, price, imageLink } = mobile;
     
@@ -17,7 +17,7 @@ export default function Mobile({ mobile , handleCart}) {
             <h3 className='font'>Price : {price}</h3>
             <div className='btn-div'>
                 <button onClick={() => handleCart(mobile)} className='btn'> Purchase 🛒</button>
-                <button className='btn'> Instock🛒</button>
+                <button onClick={()=>handleStock(mobile)} className='btn'> Instock 🛒</button>
             </div>
                 
         </div>

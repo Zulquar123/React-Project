@@ -15,6 +15,7 @@
 .img {
     border-radius: 15px;
 }
+
 .btn {
     margin: 10px;
     color: white;
@@ -34,6 +35,32 @@
     justify-content: center;
     align-items: center;
 }
+
 h6 {
     color: yellow;
+    text-align: center;
+        border: 2px solid rgb(6, 233, 6);
+        box-shadow: 5px 5px 15px rgb(0, 98, 255);
+        padding: 5px;
+    }
+    
+    .cartContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .cartContainer img {
+        width: 30px;
+        margin: 5px;
+    }
+    
+    .cartmain {
+        display: flex;
+    
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 }

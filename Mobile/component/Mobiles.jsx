@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Mobile from './Mobile';
 import './style.css'
 import { addCart , getCart} from './storage';
+import { Cart } from './cart';
 
 
 export default function Mobiles() {
@@ -14,35 +15,48 @@ export default function Mobiles() {
   }, [])
 
   useEffect(() => {
-    const getkart = getCart();
-    console.log(getkart);
-  },[])
+    if (mobiles.length > 0)
+    {
+      const getkart = getCart();
+      //console.log(getkart);
+      const savekart = []; 
+      for (const id of getkart) {
+        const mobile = mobiles.find(mobile => mobile.id === id);
+        if (mobile)
+        {
+          savekart.push(mobile);
+          console.log(savekart);
+        }
+      }
+      setCart(savekart);
+    }
+    
+  },[mobiles])
   
-
+  const handleStock = mobile => {
+        alert("Stock Available");
+}
   const handleCart = mobile => {
-    alert("Mobile Added to the Cart");
+    // alert("Mobile Added to the Cart");
     const newCart = [...cart, mobile];
     setCart(newCart);
     addCart(mobile.id);
-    alert(`Total Items in the Cart : ${cart.length+1}`);
-    
-    
+    // alert(`Total Items in the Cart : ${cart.length+1}`);    
 }
 
   return (
-
-    <div className='card'>
-      <h6>Items in the Cart : { cart.length}</h6>
-      {
-      
+    <>
+    <Cart cart={cart}> </Cart>
+    <div className='card'> 
+      {    
         mobiles.map((mobile, index) => <Mobile
           mobile={mobile}
           key={index}
           handleCart={handleCart}
-        ></Mobile>)
-      
+          handleStock={handleStock}
+        ></Mobile>)     
       }
     </div>
-    
+    </>
   )
 }
