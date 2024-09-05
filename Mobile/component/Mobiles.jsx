@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Mobile from './Mobile';
 import './style.css'
-import { addCart , getCart} from './storage';
+import { addCart , getCart , removeCartLS} from './storage';
 import { Cart } from './cart';
 
 
@@ -33,7 +33,7 @@ export default function Mobiles() {
     
   },[mobiles])
   
-  const handleStock = mobile => {
+  const handleStock = id => {
         alert("Stock Available");
 }
   const handleCart = mobile => {
@@ -42,11 +42,16 @@ export default function Mobiles() {
     setCart(newCart);
     addCart(mobile.id);
     // alert(`Total Items in the Cart : ${cart.length+1}`);    
-}
+  }
+  const handleRemoveCart = id => {
+    const remainingcart = cart.filter(mobile => mobile.id !== id);
+    setCart(remainingcart);
+    removeCartLS(id);
+  }
 
   return (
     <>
-    <Cart cart={cart}> </Cart>
+    <Cart cart={cart} handleRemoveCart={ handleRemoveCart}> </Cart>
     <div className='card'> 
       {    
         mobiles.map((mobile, index) => <Mobile
