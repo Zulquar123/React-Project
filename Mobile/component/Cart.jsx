@@ -9,7 +9,7 @@ export const Cart = ({cart , handleRemoveCart}) => {
               {
                   cart.map(mobile => 
                       <div key={mobile.id}><img src={mobile.imageLink}></img>
-                      <button onClick={()=>handleRemoveCart(mobile.id)}>Remove</button>
+                      <button onClick={()=>handleRemoveCart(mobile.id)}>❌</button>
                       </div>
                   )
                   
