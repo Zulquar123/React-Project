@@ -41,7 +41,7 @@ export default function ArrayState() {
       </button>
 
       <button
-        className="border-2 border-black rounded px-2 mx-4 mb-2 text-neutral-50 bg-[#007D8E]"
+        className="border-2 border-black rounded px-2 mx-4 mb-1 text-neutral-50 bg-[#007D8E]"
         onClick={() =>
           setArrays(() => {
             return arrays.filter((item, index) => item % 2 == 0);
