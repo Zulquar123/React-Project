@@ -19,17 +19,38 @@ export default function ArrayState() {
       >
         Remove Array Elements
       </button>
-      <hr />
 
-      <h1 className="text-xl font-bold mt-8">Array : {arrays.join(" ")}</h1>
       <button
-        className={`border-2 border-black rounded px-2 mt-1 text-neutral-50 ${
+        className={`border-2 border-black rounded px-2 mt-1 mx-4 text-neutral-50 ${
           arrays.length == 0 ? "bg-[#F40606]" : "bg-[#06C05C]"
         }`}
         onClick={() => setArrays([...arrays, arrays.length + 1])}
       >
         Add Array Elements
       </button>
+
+      <button
+        className="border-2 border-black rounded px-2 mt-1 bg-[#0545EA]  text-neutral-50"
+        onClick={() =>
+          setArrays(() => {
+            return arrays.filter((item, index) => index != 5);
+          })
+        }
+      >
+        Remove 5th index Element
+      </button>
+
+      <button
+        className="border-2 border-black rounded px-2 mx-4 mb-2 text-neutral-50 bg-[#007D8E]"
+        onClick={() =>
+          setArrays(() => {
+            return arrays.filter((item, index) => item % 2 == 0);
+          })
+        }
+      >
+        Remove Odd Elements
+      </button>
+      <hr />
     </div>
   );
 }
