@@ -21,7 +21,7 @@ export default function State() {
       <h1 className="text-xl">The Value is : {bool.toString()}</h1>
       <button
         className={`border-2 border-black rounded px-2 mt-2 ${conditional} text-neutral-50`}
-        onClick={() => setBool(!bool)}
+        onClick={() => setBool(() => !bool)}
       >
         Get Value
       </button>

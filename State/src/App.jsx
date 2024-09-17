@@ -1,5 +1,6 @@
 import Arrayofobj from "./Arrayofobj";
 import ArrayState from "./ArrayState";
+import Slide from "./Slide";
 import State from "./State";
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
       <State />
       <ArrayState />
       <Arrayofobj />
+      <Slide />
     </div>
   );
 }
