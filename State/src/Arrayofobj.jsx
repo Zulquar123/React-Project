@@ -10,9 +10,9 @@ export default function Arrayofobj() {
 
   return (
     <div className="mx-10 text-xl font-bold">
-      {arrayObj.map((item) => (
+      {arrayObj.map((item, index) => (
         <div>
-          <span>{item.name} = </span>
+          <span>{item.name} : </span>
           <span>{item.age} </span>
         </div>
       ))}
@@ -22,7 +22,7 @@ export default function Arrayofobj() {
         onClick={() =>
           setArrayobj(() => {
             return arrayObj.map((item) =>
-              item.name == "Zulquar" ? { name: "Zulquar", age: 34 } : item
+              item.name == "Zulquar" ? { name: "Zulquar", age: 30 } : item
             );
           })
         }
